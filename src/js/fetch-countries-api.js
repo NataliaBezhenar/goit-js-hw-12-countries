@@ -1,5 +1,12 @@
 import API from './fetchCountries';
 const debounce = require('lodash.debounce');
+import { alert, notice, info, success, error, defaultModules } from '@pnotify/core';
+import * as PNotifyDesktop from "@pnotify/desktop";
+import '@pnotify/core/dist/PNotify.css';
+import '@pnotify/core/dist/BrightTheme.css';
+
+
+
 
 const searchQuery = document.querySelector('input');
 
@@ -20,9 +27,14 @@ function renderCountries(res) {
   document.querySelector('.output__text').textContent = res[0].name;
   if (res.length > 10) {
     console.log('res length is ' + res.length);
+    
+    return notice({text:"Too many matches found. Please enter more specific query!",
+  modules: new Map([...defaultModules, [PNotifyDesktop, {}]])})
   }
 }
 
 function onFetchError(error) {
   alert('Something went wrong, your country was not found!');
 }
+
+

@@ -1,0 +1,32 @@
+.card {
+  border: 3px solid #fff;
+  padding: 20px;
+
+  &__title {
+    text-align: center;
+  }
+  &__headers {
+    font-size: 120%;
+    font-weight: bold;
+  }
+  &__part {
+    width: 50%;
+    float: left;
+    padding: 20px;
+  }
+  &__img {
+    height: 50%;
+    width: 50%;
+    border: 2px solid rgb(8, 8, 8);
+  }
+  &__languages {
+    &:before {
+      content: attr(aria-label);
+      font-size: 120%;
+      font-weight: bold;
+      margin-left: -40px;
+      text-transform: capitalize;
+      line-height: 150%;
+    }
+  }
+}

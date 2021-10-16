@@ -1,1 +1,1 @@
-document.querySelector('h1').textContent = "initial commit"
+import './sass/main.scss';

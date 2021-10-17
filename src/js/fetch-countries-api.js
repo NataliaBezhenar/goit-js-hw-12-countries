@@ -31,11 +31,11 @@ function renderCountries(res) {
 }
 
 function onFetchError() {
-  refs.cardContainer.innerHTML = '';
   renderError('Something went wrong, your country was not found!');
 }
 
 function renderError(errText) {
+  refs.cardContainer.innerHTML = '';
   return error({
     text: errText,
     modules: new Map([...defaultModules, [PNotifyDesktop, {}]]),

@@ -33,4 +33,15 @@
       line-height: 150%;
     }
   }
+
+  &__list {
+    list-style: none;
+    font-size: 20px;
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
 }

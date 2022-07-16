@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "@pnotify/desktop": "^5.2.0",
+    "handlebars": "^4.7.7",
+    "handlebars.numeral": "^0.2.0",
     "lodash.debounce": "^4.0.8"
   }
 }

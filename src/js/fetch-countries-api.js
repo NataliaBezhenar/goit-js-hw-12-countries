@@ -14,7 +14,7 @@ const onFetchCountries = debounce(() => {
     return;
   }
   API.fetchCountries(refs.searchQuery.value).then(renderCountries).catch(onFetchError);
-}, 500);
+}, 1000);
 
 refs.searchQuery.addEventListener('input', onFetchCountries);
 
